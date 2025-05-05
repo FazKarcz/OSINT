@@ -13,14 +13,14 @@ hashes = re.findall(hash_pattern, data)
 domains = re.findall(domain_pattern, data)
 
 # Podsumowanie
-print(f"📧 Znalezione e-maile ({len(emails)}):")
+print(f"Znalezione e-maile ({len(emails)}):")
 for email in emails:
     print("  -", email)
 
-print(f"\n🔐 Znalezione potencjalne hashe ({len(hashes)}):")
+print(f"\nZnalezione potencjalne hashe ({len(hashes)}):")
 for h in hashes:
     print("  -", h)
 
-print(f"\n🌐 Najczęstsze domeny ({len(domains)}):")
+print(f"\nNajczęstsze domeny ({len(domains)}):")
 for domain, count in Counter(domains).most_common():
     print(f"  - {domain} ({count})")
